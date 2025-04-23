@@ -10,7 +10,7 @@ div {
   display: grid;
   height: 95vh;
   grid-template-columns: 200px 1fr 1fr;
-  grid-template-rows: 1fr 0.2fr 2fr 0.4fr;
+  grid-template-rows: 1fr 0.2fr 2fr 0.2fr;
   text-align: center;
   grid-template-areas: "header header header"
                    "nav nav nav"
@@ -22,12 +22,14 @@ header {
   background-image: url(/assets/images/bg/abyss\ bg.jpg);
   background-position: 50% 65%;
   display: grid;
-  grid-template-columns: 9.9fr 0.1fr;
-  align-items: center;
+  grid-template-columns: 1fr 0.1fr;
   padding: 0px 20px;
 }
 header h1 {
   margin: 0;
+  align-self: center;
+  justify-self: center;
+  font-family: "MedievalSharp", sans-serif;
 }
 header button {
   background-color: #333;
@@ -40,6 +42,8 @@ header button {
   font-size: 16px;
   margin: 4px 2px;
   cursor: pointer;
+  align-self: self-end;
+  justify-self: end;
 }
 button:hover {
   background-color: #555;
@@ -66,12 +70,25 @@ nav {
   padding: 12px 12px;
   display: block;
 }
+.nav-bar li a:hover {
+  background-color: #555;
+}
 aside {
   grid-area: aside;
+  background-color: #555;
+  background-position: 30% 30%;
+  color: rgb(255, 255, 255);
+  border: #000000 solid 3px;
+  padding: 10px;
+}
+aside a {
+  
 }
 main {
   grid-area: main;
+  background-color: rgb(45, 167, 181);
 }
 footer {
   grid-area: footer;
+  background-color: black;
 }
