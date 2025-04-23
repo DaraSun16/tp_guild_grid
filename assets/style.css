@@ -1,10 +1,12 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-position: 50% 50%;
+}
 div {
-  border: 3px solid black;
-  background-color: aquamarine;
-  margin: 5px;
+  margin: 0px;
 }
 #parent {
-  padding: 5px;
   display: grid;
   height: 95vh;
   grid-template-columns: 200px 1fr 1fr;
@@ -19,20 +21,57 @@ header {
   grid-area: header;
   background-image: url(/assets/images/bg/abyss\ bg.jpg);
   background-position: 50% 65%;
+  display: grid;
+  grid-template-columns: 9.9fr 0.1fr;
+  align-items: center;
+  padding: 0px 20px;
+}
+header h1 {
+  margin: 0;
+}
+header button {
+  background-color: #333;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+button:hover {
+  background-color: #555;
 }
 nav {
-  background-color: cyan;
   grid-area: nav;
 }
+.nav-bar {
+  background-color: #333;
+  position: fixed;
+  display: grid;
+  width: 100%;
+  grid-auto-flow: column;
+  justify-content: start, space-between;
+}
+.nav-bar ul {
+  display: contents;
+  list-style-type: none;
+}
+.nav-bar li a {
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  padding: 12px 12px;
+  display: block;
+}
 aside {
-  background-color: lightblue;
   grid-area: aside;
 }
 main {
-  background-color: yellow;
   grid-area: main;
 }
 footer {
-  background-color: purple;
   grid-area: footer;
 }
