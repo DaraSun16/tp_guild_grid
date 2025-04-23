@@ -1,0 +1,38 @@
+div {
+  border: 3px solid black;
+  background-color: aquamarine;
+  margin: 5px;
+}
+#parent {
+  background-color: coral;
+  padding: 5px;
+  display: grid;
+  height: 95vh;
+  grid-template-columns: 200px 1fr 1fr;
+  grid-template-rows: 1fr 0.2fr 2fr 0.4fr;
+  text-align: center;
+  grid-template-areas: "header header header"
+                   "nav nav nav"
+                   "aside main main"
+                   "footer footer footer";
+}
+header {
+  background-color: cadetblue;
+  grid-area: header;
+}
+nav {
+  background-color: cyan;
+  grid-area: nav;
+}
+aside {
+  background-color: lightblue;
+  grid-area: aside;
+}
+main {
+  background-color: yellow;
+  grid-area: main;
+}
+footer {
+  background-color: purple;
+  grid-area: footer;
+}
