@@ -1,7 +1,11 @@
+*, *::before, *::after {
+  box-sizing: inherit;
+}
 html, body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  overflow-y: hidden;
 }
 div {
   margin: 0px;
@@ -153,20 +157,37 @@ aside {
 }
 main {
   grid-area: main;
-  position: relative;
-  overflow: hidden;
   width: 100%;
+}
+.content-overlay {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.content-overlay h2 {
+  font-family: "MedievalSharp", sans-serif;
+  color: rgb(255, 30, 0);
+  font-size: 1.7rem;
+  text-shadow: 3px 3px 3px rgb(106, 233, 106);
+}
+.content-overlay p {
+  font-family: "Roboto", "Noto Serif JP", sans-serif;
+  color: white;
+  font-size: 1.2rem;
+  text-align: center;
 }
 .background-container {
   position: fixed;
   width: 100vw;
-  height: auto;
+  height: 100vh;
   inset: 0;
   background-image: url(./images/bg/index-bg.png);
   background-size: cover; 
   background-position: bottom right;
   background-repeat: no-repeat;
-  filter: brightness(85%) contrast(95%);
+  filter: brightness(50%) contrast(95%);
   z-index: -1;
 }
 .content-overlay {
@@ -179,25 +200,28 @@ footer {
   grid-area: footer;
   background-color: rgb(15, 15, 15);
 }
+.footer-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
 footer p {
   color: white;
   font-size: 1rem;
   font-family: "Roboto", "Noto Serif JP", sans-serif;
   text-align: left;
-  padding: 10px;
 }
 .footer-icons {
   display: flex;
-  justify-content: center;
+  justify-content: center;;
+  align-items: flex-end;
   gap: 2vw;
-  align-items: flex-start;
-  padding: 10px;
 }
 .footer-links {
   display: flex;
-  justify-content: flex-end;
+  align-items: center;
   gap: 2vw;
-  align-items: flex-start;
   font-size: 1rem;
   font-family: "Roboto", "Noto Serif JP", sans-serif;
 }
@@ -209,7 +233,4 @@ footer p {
 }
 .footer-links a:hover {
   color: rgb(173, 63, 49);
-}
-.footer-links a:visited {
-  color: rgb(71, 0, 151);
 }
