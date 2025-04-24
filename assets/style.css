@@ -1,14 +1,15 @@
-body {
+html, body {
   margin: 0;
   padding: 0;
-  background-position: 50% 50%;
+  box-sizing: border-box;
 }
 div {
   margin: 0px;
 }
 #parent {
   display: grid;
-  height: 95vh;
+  width: 100vw;
+  height: 100vh;
   grid-template-columns: 200px 1fr 1fr;
   grid-template-rows: 1fr 0.2fr 2fr 0.2fr;
   text-align: center;
@@ -20,7 +21,7 @@ div {
 header {
   grid-area: header;
   background-image: url(./images/bg/wallpapersden.com_artistic-sailing-ship-in-ocean_1920x1080.jpg);
-  background-position: 50% 50%; 
+  background-position: 100% 50%; 
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   padding: 0px 20px;
@@ -36,27 +37,30 @@ header h1 {
   align-self: center;
   justify-self: center;
   font-family: "MedievalSharp", sans-serif;
-  color: white;
+  color: rgb(106, 233, 106);
   text-shadow: 3px 3px 3px rgb(173, 63, 49);
+  font-size: 3rem;
 }
 header button {
   background-color: #333;
-  color: white;
   border: none;
-  padding: 10px 20px;
-  text-align: center;
-  text-decoration: none;
+  padding: 1vw 1.5vh;
   display: inline-block;
-  font-size: 20px;
-  margin: 20px;
+  margin: 1.5vw 1vh;
   cursor: pointer;
   align-self: self-end;
   justify-self: end;
-  font-family: "MedievalSharp", sans-serif;
   border-radius: 5px;
 }
-button:hover {
-  background-color: #555;
+header button a {
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-size: 1.3rem;
+  font-family: "MedievalSharp", sans-serif;
+}
+button a:hover {
+  font-size: 1.4rem;
   color: rgb(173, 63, 49);
 }
 nav {
@@ -64,57 +68,107 @@ nav {
 }
 .nav-bar {
   background-color: #333;
-  position: fixed;
   display: grid;
   width: 100%;
   grid-auto-flow: column;
   justify-content: start, space-between;
+  border: 1px solid black;;
 }
 .nav-bar ul {
   display: contents;
   list-style-type: none;
 }
 .nav-bar li a {
+  border-right: #000000 1px solid;
   color: white;
   text-align: center;
   text-decoration: none;
   padding: 12px 12px;
   display: block;
+  font-size: 1.1rem;
+  font-family: "Roboto" "Noto Serif JP", sans-serif;
 }
 .nav-bar li a:hover {
   background-color: #555;
   color: rgb(173, 63, 49);
+  font-size: 1.2rem ;
 }
 aside {
   grid-area: aside;
   background-color: #555;
   background-position: 30% 30%;
   color: rgb(255, 255, 255);
-  border: #000000 solid 3px;
+  border: #000000 solid 1px;
   padding:10px;
 }
 .aside-bar {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  align-content: flex-start, space-around;
-  text-align: center
+  align-content: flex-start, space-between;
+  text-align: center;
 }
-.aside-bar ul {;
-  list-style-type: none;
-}
-.aside-bar ul li a {
+.aside-bar a {
+  font-weight: 800;
   color: white;
   text-decoration: none;
   display: block;
-  font-weight: 800;
-  font-size: 1.5rem;
+  font-weight: 900;
+  font-size: 1.7rem;
+  font-family: "medievalSharp";
   text-align: center;
-  padding: 12px 12px;
+  padding: 20px 10px;
+  text-shadow: 3px 3px 6px black;
+}
+.aside-bar a:hover {
+  color: rgb(106, 233, 106);
+  font-size: 1.9rem;
+}
+.icons {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  justify-content:flex-start, space-around;
+  font-size: 2rem;
+}
+.discord_link {
+  color: #5865F2;
+
+}
+.discord_link:hover {
+  color: #404EED;
+}
+.twitter_link {
+  color: #000000;
+}
+.twitter_link:hover {
+  color: #1DA1F2;
+}
+.insta_link {
+  color: #E1306C;
+}
+.insta-link:hover {
+  color: #C13584
 }
 main {
   grid-area: main;
-  background-color: rgb(45, 167, 181);
+  position: relative;
+  overflow: hidden;
+}
+.background-container {
+  position: absolute;
+  inset: 0;
+  background-image: url(./images/bg/index-bg.png);
+  background-size: cover; 
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 0;
+}
+.content-overlay {
+  position: relative;
+  z-index: 1;
+  padding: 2rem;
+  color: white;
 }
 footer {
   grid-area: footer;
