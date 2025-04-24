@@ -160,12 +160,13 @@ main {
 .background-container {
   position: fixed;
   width: 100vw;
-  height: 100vh;
+  height: auto;
   inset: 0;
   background-image: url(./images/bg/index-bg.png);
   background-size: cover; 
   background-position: bottom right;
   background-repeat: no-repeat;
+  filter: brightness(85%) contrast(95%);
   z-index: -1;
 }
 .content-overlay {
@@ -176,8 +177,39 @@ main {
 }
 footer {
   grid-area: footer;
-  background-color: black;
+  background-color: rgb(15, 15, 15);
 }
-h2 {
-
+footer p {
+  color: white;
+  font-size: 1rem;
+  font-family: "Roboto", "Noto Serif JP", sans-serif;
+  text-align: left;
+  padding: 10px;
+}
+.footer-icons {
+  display: flex;
+  justify-content: center;
+  gap: 2vw;
+  align-items: flex-start;
+  padding: 10px;
+}
+.footer-links {
+  display: flex;
+  justify-content: flex-end;
+  gap: 2vw;
+  align-items: flex-start;
+  font-size: 1rem;
+  font-family: "Roboto", "Noto Serif JP", sans-serif;
+}
+.footer-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  font-family: "MedievalSharp", sans-serif;
+}
+.footer-links a:hover {
+  color: rgb(173, 63, 49);
+}
+.footer-links a:visited {
+  color: rgb(71, 0, 151);
 }
