@@ -19,17 +19,25 @@ div {
 }
 header {
   grid-area: header;
-  background-image: url(/assets/images/bg/abyss\ bg.jpg);
-  background-position: 50% 65%;
+  background-image: url(./images/bg/wallpapersden.com_artistic-sailing-ship-in-ocean_1920x1080.jpg);
+  background-position: 50% 50%; 
   display: grid;
-  grid-template-columns: 1fr 0.1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   padding: 0px 20px;
+}
+header img {
+  width: auto;
+  height: 25vh;
+  filter: brightness(130%);
+  clip-path: circle(40%);
 }
 header h1 {
   margin: 0;
   align-self: center;
   justify-self: center;
   font-family: "MedievalSharp", sans-serif;
+  color: white;
+  text-shadow: 3px 3px 3px rgb(173, 63, 49);
 }
 header button {
   background-color: #333;
@@ -39,14 +47,17 @@ header button {
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
+  font-size: 20px;
+  margin: 20px;
   cursor: pointer;
   align-self: self-end;
   justify-self: end;
+  font-family: "MedievalSharp", sans-serif;
+  border-radius: 5px;
 }
 button:hover {
   background-color: #555;
+  color: rgb(173, 63, 49);
 }
 nav {
   grid-area: nav;
@@ -72,6 +83,7 @@ nav {
 }
 .nav-bar li a:hover {
   background-color: #555;
+  color: rgb(173, 63, 49);
 }
 aside {
   grid-area: aside;
@@ -79,10 +91,26 @@ aside {
   background-position: 30% 30%;
   color: rgb(255, 255, 255);
   border: #000000 solid 3px;
-  padding: 10px;
+  padding:10px;
 }
-aside a {
-  
+.aside-bar {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-content: flex-start, space-around;
+  text-align: center
+}
+.aside-bar ul {;
+  list-style-type: none;
+}
+.aside-bar ul li a {
+  color: white;
+  text-decoration: none;
+  display: block;
+  font-weight: 800;
+  font-size: 1.5rem;
+  text-align: center;
+  padding: 12px 12px;
 }
 main {
   grid-area: main;
@@ -91,4 +119,7 @@ main {
 footer {
   grid-area: footer;
   background-color: black;
+}
+h2 {
+
 }
