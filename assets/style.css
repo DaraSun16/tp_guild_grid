@@ -101,7 +101,6 @@ nav {
 aside {
   grid-area: aside;
   background-color: #555;
-  background-position: 30% 30%;
   color: rgb(255, 255, 255);
   border: #000000 solid 1px;
   padding:10px;
